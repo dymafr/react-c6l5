@@ -1,4 +1,5 @@
 import React from 'react';
+import Article from './Article';
 
 function Articles({}) {
   const articles = [
@@ -11,10 +12,7 @@ function Articles({}) {
     <div style={{ width: '700px' }}>
       <h1 className="mb-20">Liste des articles</h1>
       {articles.map((article) => (
-        <div className="mb-20">
-          <h2>{article.title}</h2>
-          <p>{article.content}</p>
-        </div>
+        <Article content={article.content} title={article.content} />
       ))}
     </div>
   );
